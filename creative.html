@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <iframe src="https://nikolazdravkovic.github.io/ads.github.io/" frameborder="0" id="parent"></iframe>
+
+    <!-- <button id="postMessage">Post message</button> -->
+
+    <script>
+
+        window.onload = function () {
+
+            var reciverWindow = document.getElementById('parent').contentWindow;
+
+            reciverWindow.postMessage('https://www.google.rs/', '*');
+
+            // document.getElementById('postMessage').addEventListener('click', function () {
+            //     reciverWindow.postMessage('hello WORLD', 'https://nikolazdravkovic.github.io/ads.github.io/');
+            // })
+        }
+
+    </script>
+</body>
+
+</html>
